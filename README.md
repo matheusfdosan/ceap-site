@@ -15,7 +15,7 @@
 <br>
 
 <p align="center">
-  <img alt="ceap-img" src=".github/preview.png" width="100%" style='border-radius: 10px'>
+  <img alt="ceap-img" src="./preview.png" width="100%" style='border-radius: 10px'>
 </p>
 
 ## 🚀 Tecnologias
