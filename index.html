@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Organização não governamental, sem fins lucrativos, fundada em 1985,
+    que atua no modelo de escola profissionalizante gratuita, e oferece anualmente cursos de formação e qualificação profissional."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://ceappedreira.org.br/wp-content/themes/ceap/favicon.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Source Sans 3", sans-serif;
+        outline: 0;
+      }
+
+      html {
+        font-size: 63.5%;
+      }
+
+      html,
+      body {
+        height: 100vh;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: antialiased;
+        background-color: #fafafa;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-size: 1.6rem;
+        overflow-y: scroll;
+        position: absolute;
+        z-index: 9999999;
+        width: 100%;
+      }
+
+      header {
+        display: block;
+        padding: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+      }
+
+      .header-container {
+        width: 90%;
+        max-width: 90rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .header-container .logo img {
+        width: 17rem;
+      }
+
+      .header-container .menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        font-size: 2rem;
+      }
+
+      .header-container .menu li a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .header-container .menu li a:hover {
+        text-decoration: underline 2px;
+      }
+
+      .burguer {
+        display: none;
+      }
+
+      .burguer-menu {
+        display: none;
+      }
+
+      main {
+        width: 90%;
+        max-width: 90rem;
+        margin: auto;
+        margin-top: 12.4rem;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+        height: 65vh;
+      }
+
+      .hero .text h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero .text p {
+        font-size: 1.8rem;
+      }
+
+      .hero .text p span {
+        color: #fff;
+        background: #585199;
+        padding: 0 2px;
+      }
+
+      .hero .img img {
+        width: 40rem;
+      }
+
+      #about {
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+      }
+
+      #about h2 {
+        text-align: center;
+        font-size: 3.5rem;
+        color: #585199;
+      }
+
+      #about section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-weight: 400;
+      }
+
+      #about section:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+
+      #about section:nth-child(4) {
+        flex-direction: row-reverse;
+      }
+
+      #about section img {
+        width: 40rem;
+        border-radius: 1rem;
+      }
+
+      #emphasis {
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      #emphasis strong {
+        color: #585199;
+        text-decoration: underline;
+      }
+
+      #contact {
+        padding: 6rem;
+      }
+
+      #contact h2 {
+        text-align: center;
+        font-size: 3.5rem;
+        color: #585199;
+      }
+
+      #contact .address {
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      #contact .address h3 {
+        color: #2d2768;
+        margin-bottom: 10px;
+      }
+
+      #contact .address div:nth-child(2) {
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: #000;
+      }
+
+      #contact .address div:last-child {
+        font-weight: 500;
+      }
+
+      #contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      #contact form div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1.8rem;
+      }
+
+      #contact form div input {
+        height: 4rem;
+        padding: 0px 1rem;
+        font-size: 1.6rem;
+      }
+
+      #contact form select {
+        height: 4rem;
+        padding: 0px 1rem;
+        font-size: 1.6rem;
+      }
+
+      #contact form textarea {
+        font-size: 1.6rem;
+        padding: 1rem;
+        resize: none;
+        max-width: 50rem;
+        height: 20rem;
+      }
+
+      #contact form button {
+        width: 10rem;
+        height: 5rem;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 3px;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+
+      footer {
+        width: 100%;
+        border-top: 1px solid #000;
+        background-color: #fff;
+      }
+
+      .footer-container {
+        width: 90%;
+        max-width: 90rem;
+        margin: auto;
+        padding: 30px;
+        text-align: center;
+        font-size: 1.8rem;
+      }
+
+      .footer-container p a {
+        color: #585199;
+        text-decoration: none;
+      }
+
+      .footer-container p a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 425px) {
+        html {
+          font-size: 55%;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .header-container .menu {
+          display: none;
+        }
+
+        .header-container .burguer {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 0 1rem;
+          width: 6rem;
+          height: 4rem;
+          cursor: pointer;
+        }
+
+        .header-container .burguer .line {
+          width: 100%;
+          height: 0.3rem;
+          background-color: #000;
+          border-radius: 1rem;
+        }
+
+        .burguer-menu.active {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background-color: #fff;
+        }
+
+        .burguer-menu.active ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          font-size: 3rem;
+          list-style: none;
+        }
+
+        .burguer-menu.active ul li a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        .burguer-menu.active ul li a:hover {
+          text-decoration: underline;
+        }
+      }
+
+      @media (max-width: 785px) {
+        #about section,
+        #about section:nth-child(2),
+        #about section:nth-child(4) {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .hero {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <title>CEAP - Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="https://ceappedreira.org.br/wp-content/uploads/2022/08/Logo_ceap_offslogam_png-1.png"
+              alt="ceap-logo"
+            />
+          </a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="courses.html">Cursos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+
+        <div class="burguer">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="burguer-menu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="courses.html">Cursos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="text">
+          <h2>
+            Transformando Vidas, Construindo Futuros, Uma Educação que Faz a
+            Diferença!
+          </h2>
+          <p>
+            Organização não governamental, sem fins lucrativos, fundada em 1985,
+            que atua no modelo de
+            <span>escola profissionalizante gratuita</span>, e oferece
+            anualmente cursos de formação e qualificação profissional.
+          </p>
+        </div>
+        <div class="img">
+          <img src="img.svg" alt="hero-img" />
+        </div>
+      </div>
+
+      <div id="about">
+        <h2>Sobre nós</h2>
+
+        <section>
+          <p>
+            O CEAP – Centro Educacional Assistencial Profissionalizante – é uma
+            organização não governamental, sem fins lucrativos, fundada em 1985,
+            que atua no modelo de escola profissionalizante gratuita, e oferece
+            anualmente cursos de formação e qualificação profissional para 1.100
+            jovens entre 10 e 18 anos que no contraturno estejam matriculados no
+            ensino regular.
+          </p>
+
+          <img
+            src="https://ceappedreira.org.br/wp-content/uploads/2019/06/Robótica-básica-curso-gratuito-ceap-tecnologia-ong-.jpg"
+            alt="robotic-boys"
+          />
+        </section>
+
+        <section>
+          <p>
+            Além da formação técnica-profissional, o CEAP preocupa-se com a
+            Formação Humana dos atendidos, desenvolvendo ao longo desses 37 anos
+            uma metodologia com dois principais pilares: a educação
+            personalizada, reconhecendo cada beneficiário como um ser único e
+            especial, e o envolvimento familiar no processo de formação de cada
+            indivíduo.
+          </p>
+
+          <img
+            src="https://ceappedreira.org.br/wp-content/uploads/2021/10/DVTPalestra.png"
+            alt="classroom"
+          />
+        </section>
+
+        <section>
+          <p>
+            Desde a sua fundação, o CEAP já atendeu mais de 8.000 jovens em
+            situação de alta vulnerabilidade social. Hoje, a maioria desses
+            beneficiários encontram-se em grandes empresas, desenvolvendo um
+            excelente trabalho profissional.
+          </p>
+
+          <img
+            src="https://ceappedreira.org.br/wp-content/uploads/2023/09/Descubra-como-o-CEAP-em-parceria-com-a-Tokio-Marine-Seguradora-estao-impactando-na-vida-de-jovens-em-situacao-de-alta-vulnerabilidade-cover-edited.jpg"
+            alt="thumbs-up"
+          />
+        </section>
+
+        <section>
+          <p>
+            Atualmente, a organização possui uma área de 23 mil m² e está
+            inserida em uma comunidade na zona sul de São Paulo, no distrito de
+            Pedreira. Este ocupa a 81º posição no IDH – Índice de
+            Desenvolvimento Humano – entre os 96 distritos da cidade de São
+            Paulo, segundo o IBGE.
+          </p>
+
+          <img
+            src="https://ceappedreira.org.br/wp-content/uploads/2019/06/Fotosite-14.jpg"
+            alt="ceap-seen-from-above"
+          />
+        </section>
+
+        <p id="emphasis">
+          Desde a sua fundação, o CEAP já atendeu mais de
+          <strong>8.000 jovens</strong> em situação de alta vulnerabilidade
+          social
+        </p>
+      </div>
+
+      <div id="contact">
+        <h2>Contato</h2>
+
+        <div class="address">
+          <h3>Centro Educacional Assistencial Profissionalizante</h3>
+
+          <div>
+            <address>Rua José Vieira Martins, 270</address>
+            <address>Pedreira</address>
+            <address>São Paulo – SP – Brasil</address>
+            <address>CEP 04466-025</address>
+          </div>
+
+          <div>
+            <p>Tel/Fax.: +55 (11) 5613-0200</p>
+            <p>E-mail: contato@pedreira.org</p>
+          </div>
+        </div>
+        <form>
+          <div>
+            <label for="form-name">Nome:</label>
+            <input id="form-name" type="text" placeholder="Silvio Santos" />
+          </div>
+
+          <div>
+            <label for="form-email">E-mail:</label>
+            <input
+              id="form-email"
+              type="email"
+              placeholder="pessoa@exemplo.com"
+            />
+          </div>
+
+          <div>
+            <label for="form-tel">Telefone:</label>
+            <input
+              id="form-tel"
+              type="number"
+              placeholder="+55 11 94002-8922"
+            />
+          </div>
+
+          <select id="topic">
+            <option>Assunto</option>
+            <option>Reclamação</option>
+            <option>Sugestão</option>
+            <option>Elogio</option>
+            <option>Dúvida</option>
+          </select>
+
+          <div>
+            <label for="form-msg">Mesagem:</label>
+            <textarea
+              id="form-msg"
+              cols="30"
+              rows="10"
+              placeholder="Digite aqui sua mensagem"
+            ></textarea>
+          </div>
+
+          <div>
+            <button type="reset">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>
+          Por <strong>Pedro Cabral</strong> e
+          <strong>Matheus Faustino</strong> para
+          <a href="https://ceappedreira.org.br/" target="_blank">CEAP</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const burguer = document.querySelector(".burguer")
+      const burguerMenu = document.querySelector(".burguer-menu")
+
+      let menuActive = false
+
+      burguer.onclick = () => {
+        if (menuActive === false) {
+          burguerMenu.classList.add("active")
+          document.querySelector("body").style.overflowY = "hidden"
+          menuActive = true
+        } else {
+          burguerMenu.classList.remove("active")
+          document.querySelector("body").style.overflowY = "scroll"
+          menuActive = false
+        }
+      }
+
+      burguerMenu
+        .querySelectorAll(".burguer-menu > ul li")
+        .forEach((element) => {
+          element.onclick = () => {
+            burguerMenu.classList.remove("active")
+            document.querySelector("body").style.overflowY = "scroll"
+            menuActive = false
+          }
+        })
+    </script>
+  </body>
+</html>
