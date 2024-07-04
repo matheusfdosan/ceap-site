@@ -15,7 +15,7 @@
 <br>
 
 <p align="center">
-  <img alt="ceap-img" src="./preview.png" width="100%" style='border-radius: 10px'>
+  <img alt="ceap-img" src=".github/preview.png" width="100%" style='border-radius: 10px'>
 </p>
 
 ## 🚀 Tecnologias
@@ -28,12 +28,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Um projeto desenvolvido para a aula de Desenvolvimento Web no <a href="https://ceappedreira.org.br/" target="_blank">CEAP</a>.
+Um projeto desenvolvido para a aula de Desenvolvimento Web no <a href="https://ceappedreira.org.br/" target="_blank">CEAP</a>. O objetivo desse projeto é apresentar todos os cursos que o CEAP oferece.
 
-Dê uma olhada no projeto clicando nesse [link](https://matheusfdosan.github.io/ceap-site/).
+Dê uma olhada no projeto clicando nesse [link](https://matheusfdosan.github.io/ceap-site/). També veja o mockup produzido: [Mockup](design/mockups.pdf)
+
 
 ## Contato
 
 - Acesse também meus outros repositórios no [Github](https://github.com/matheusfdosan?tab=repositories).
 
 - Também me siga no [Instagram](https://instagram.com/matheusfdosan).
+
+- Crie conexão comigo no [Linkedin](https://linkedin.com/in/matheusfaus).
